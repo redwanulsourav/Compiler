@@ -17,6 +17,19 @@
 "call" {
     return CALL;
 }
+
+"from" {
+    return FROM;
+}
+
+"to"    {
+    return TO;
+}
+
+"step" {
+    return STEP;
+}
+
 "r_paren" {
     return RP;
 }

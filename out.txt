@@ -7,6 +7,7 @@ Value of the expression: 38
 variable name: d
 Value of the expression: 5
 If else found
+Loop runs 3 times
 Value of the expression: 5
 Value of the expression: 6
 Else if ladder found

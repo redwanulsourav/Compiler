@@ -11,7 +11,7 @@
 
 %token INT NUM_INT DOUBLE FLOAT RP LP EOL OP_ASSIGN MAIN LC RC ID COMMA PLUS MINUS
 %token MULT DIV POWR IF ELSE GT GE LT LE EQ NEQ FOR SEM OP_LOGICAL_OR OP_LOGICAL_AND
-%token SWITCH BREAK CASE COLON DEFAULT FUNC CALL
+%token SWITCH BREAK CASE COLON DEFAULT FUNC CALL FROM TO STEP
 %left OP_ASSIGN
 %left OP_LOGICAL_OR
 %left OP_LOGICAL_AND
@@ -59,6 +59,11 @@
                             printf("Else if ladder found\n");
                         }
                         |
+                        IF LP new_expression RP LC cstatement RC else_if_block
+                        {
+                            printf("Else if ladder found\n");
+                        }
+                        |
                         for_loop
                         {
                             printf("For loop detected\n");
@@ -70,6 +75,8 @@
                         }
                         |
                         cdeclaration EOL
+                        |
+                        for_loop2
                         ;
 
      switch_case:       SWITCH LP ID RP LC case_block RC
@@ -110,6 +117,21 @@
                             }
                         }
                         ;
+
+    for_loop2:          FOR FROM new_expression TO new_expression STEP new_expression LC cstatement RC
+                        {
+                            int start_value = $3;
+                            int end_value = $5;
+                            int step = $7;
+                            int count = 0;
+                            int j;
+                            for(j = start_value; j < end_value; j += step){
+                                count++;
+
+                            }
+
+                            printf("Loop runs %d times\n",count);
+                        }
 
     for_init    :       /*empty*/
                         |

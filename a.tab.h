@@ -75,7 +75,10 @@
      COLON = 291,
      DEFAULT = 292,
      FUNC = 293,
-     CALL = 294
+     CALL = 294,
+     FROM = 295,
+     TO = 296,
+     STEP = 297
    };
 #endif
 
