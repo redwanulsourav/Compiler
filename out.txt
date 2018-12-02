@@ -1,0 +1,22 @@
+variable name: a
+variable already declared
+variable name: b
+variable name: cat
+Value of the expression: 38
+Value of the expression: 38
+variable name: d
+Value of the expression: 5
+If else found
+Value of the expression: 5
+Value of the expression: 6
+Else if ladder found
+Simple if found
+For loop found
+For loop detected
+variable name: dbl
+Switch id has value: 6
+Switch case block detected
+Function declared : helloWorld
+
+
+Compilation Successful
